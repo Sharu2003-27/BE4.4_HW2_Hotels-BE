@@ -16,6 +16,10 @@ app.use(express.json())
 
 intializeDatabase()
 
+app.get("/", (req, res) => {
+    res.send("Welcome to Hotels Backend Management!!")
+})
+
 async function createHotel(newHotel) {
     try {
         const hotel = new Hotels(newHotel)
